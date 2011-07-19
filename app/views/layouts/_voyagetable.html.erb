@@ -33,6 +33,8 @@
 									<% @voyages.each do |voyage| %>
 										<%= image_tag(voyage.transportation+".jpg", :tooltip => "From:"+voyage.start_location+"<br/> 
 										To:"+voyage.end_location+"<br/> 
+										Departure:"+voyage.start_time.strftime("%a at %I:%M%p")+", "+voyage.start_date.strftime("%m/%d/%y")+" </br>
+										Arrival:"+voyage.end_time.strftime("%a at %I:%M%p")+", "+voyage.end_date.strftime("%m/%d/%y")+"</br> 
 										Transit Time: "+voyage.transit_time.to_s) %>
 									<% end %>	
 									<div id="details">
